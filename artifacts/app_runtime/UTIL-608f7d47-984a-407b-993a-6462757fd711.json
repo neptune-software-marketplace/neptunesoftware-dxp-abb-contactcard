@@ -1,0 +1,578 @@
+{
+	"id": "608f7d47-984a-407b-993a-6462757fd711",
+	"createdAt": "2021-02-24T08:48:02.943Z",
+	"createdBy": "helder",
+	"objects": [
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "2ab5efed-8b74-4df6-d2fa-a9b9e24969fd",
+					"fieldName": "How_to_use",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"//Add this to a button or link in order to trigger the pop-over ",
+						"//diaContact.openBy(this);",
+						"",
+						"// instructions",
+						"// Our recommendation is to make a binding of Business Partner data structure to popover 'diaContact'",
+						"// The place holder for Image and Name are placed in sap.m.ObhecHeader 'headContact'. Make a binding of icon to Image source, and title to Name of the Business Partner",
+						"// The place holder of Address, Phone Number and Email are sap.m.Text and can be bound to respective sources from structures."
+					],
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "3eba95f0-96d8-44aa-d2bb-ea69b6514e9c",
+					"fieldName": "CSSHtml",
+					"fieldParent": 99999,
+					"fieldType": "sap.ui.core.HTML",
+					"script": "",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "3d9c6c52-9ca0-4aec-975b-261018bea7c8",
+							"fieldName": "css",
+							"fieldParent": "3eba95f0-96d8-44aa-d2bb-ea69b6514e9c",
+							"fieldType": "neptune.Html",
+							"script": [
+								"==OBJECT STRING==",
+								"<style>",
+								"    #headContact-titleText {",
+								"        /*height: 30px;*/",
+								"        padding-top: 10px !important;",
+								"    }",
+								"",
+								"    #headContact-img {",
+								"        border-radius: 50% !important;",
+								"    }",
+								"    ",
+								"    #headContact{",
+								"        padding: 5px !important;",
+								"        padding-bottom: 10px !important;",
+								"        padding-left: 10px !important;",
+								"    }",
+								"</style>"
+							],
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						}
+					]
+				},
+				{
+					"fieldNo": "3d7807e8-9cca-4db6-8da6-e82867ad743f",
+					"fieldName": "diaContact",
+					"fieldParent": 99999,
+					"fieldType": "sap.m.Popover",
+					"script": "",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "verticalScrolling",
+							"grouping": "Properties",
+							"value": true,
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "title",
+							"grouping": "Properties",
+							"value": "Master Data ID",
+							"script": "",
+							"translation": [
+								{
+									"language": "1",
+									"value": "客户"
+								},
+								{
+									"language": "D",
+									"value": "Debitor"
+								},
+								{
+									"language": "P",
+									"value": "Cliente"
+								},
+								{
+									"language": "S",
+									"value": "Cliente"
+								}
+							]
+						},
+						{
+							"attribute": "showHeader",
+							"grouping": "Properties",
+							"value": true,
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "contentWidth",
+							"grouping": "Properties",
+							"value": "320px",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "beforeOpen",
+							"grouping": "Events",
+							"value": "Anonymous Function",
+							"script": [
+								"==OBJECT STRING==",
+								"// triggerCall.setHref('tel:' + txtformCustomer1PHONE.getText());",
+								"// triggerEmail.setHref('mailto:' + txtformCustomer1Email.getText());",
+								"// triggerMessage.setHref('sms:' + txtformCustomer1PHONE.getText());"
+							],
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "bcdba5f4-63e0-498d-9b7e-057964b0796d",
+							"fieldName": "boxContact",
+							"fieldParent": "3d7807e8-9cca-4db6-8da6-e82867ad743f",
+							"fieldType": "sap.m.VBox",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "visible",
+									"grouping": "Properties",
+									"value": true,
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "8a1c7779-c785-49d0-c0fc-f1080d7a716c",
+									"fieldName": "headContact",
+									"fieldParent": "bcdba5f4-63e0-498d-9b7e-057964b0796d",
+									"fieldType": "sap.m.ObjectHeader",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Contact Name",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "styleClass",
+											"grouping": "Properties",
+											"value": "newHeight",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "iconDensityAware",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://customer",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "titleLevel",
+											"grouping": "Properties",
+											"value": "H3",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "bd97f3af-bc39-4da6-81f9-31b0c127f0e6",
+									"fieldName": "contactAddress1",
+									"fieldParent": "bcdba5f4-63e0-498d-9b7e-057964b0796d",
+									"fieldType": "sap.m.Text",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "wrapping",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Address Line 1",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "styleClassMargin",
+											"grouping": "Properties",
+											"value": "sapUiMediumMarginBegin",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "7bba7301-cef3-42b2-cf6a-2bea5b8b9368",
+									"fieldName": "contactAddress2",
+									"fieldParent": "bcdba5f4-63e0-498d-9b7e-057964b0796d",
+									"fieldType": "sap.m.Text",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "wrapping",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Address Line 2",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "styleClassMargin",
+											"grouping": "Properties",
+											"value": "sapUiMediumMarginBegin",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "bc6d165b-2d06-46b3-f4f3-96da6ca926c4",
+									"fieldName": "contactPhone",
+									"fieldParent": "bcdba5f4-63e0-498d-9b7e-057964b0796d",
+									"fieldType": "sap.m.Text",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "wrapping",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "123456789",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "styleClassMargin",
+											"grouping": "Properties",
+											"value": "sapUiMediumMarginBegin",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "ab94973a-dfe0-4150-b6d1-f0c71ed21f47",
+									"fieldName": "contactEmail",
+									"fieldParent": "bcdba5f4-63e0-498d-9b7e-057964b0796d",
+									"fieldType": "sap.m.Text",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "wrapping",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "info@neptune-software.com",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "styleClassMargin",
+											"grouping": "Properties",
+											"value": "sapUiMediumMarginBegin",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "95857789-8fb7-4900-f313-2e57aede7aa2",
+									"fieldName": "footerContact",
+									"fieldParent": "bcdba5f4-63e0-498d-9b7e-057964b0796d",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "addContent",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "8689e3e4-fc88-4dde-dcd2-18ee21a4532d",
+											"fieldName": "Middle",
+											"fieldParent": "95857789-8fb7-4900-f313-2e57aede7aa2",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentMiddle",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "ba9b3f18-9b4f-49f3-fb4c-97ae170ded59",
+													"fieldName": "btnCall",
+													"fieldParent": "8689e3e4-fc88-4dde-dcd2-18ee21a4532d",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"customComponent": false,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://fa-solid/phone",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "document.location.href = \"tel:\"+contactPhone.getText();",
+															"script": "document.location.href = \"tel:\"+contactPhone.getText();",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "43d4af2d-7ae9-424a-f6b2-2a5e918e6aa6",
+													"fieldName": "btnEMail",
+													"fieldParent": "8689e3e4-fc88-4dde-dcd2-18ee21a4532d",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"customComponent": false,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://email",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "document.location.href = \"mailto:\"+contactEmail.getText();",
+															"script": "document.location.href = \"mailto:\"+contactEmail.getText();",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "eaa07c9a-e2cf-4c8d-9c28-61bdd64e7439",
+													"fieldName": "btnSMS",
+													"fieldParent": "8689e3e4-fc88-4dde-dcd2-18ee21a4532d",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"customComponent": false,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://message-popup",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "document.location.href = \"sms:\"+contactPhone.getText();",
+															"script": "document.location.href = \"sms:\"+contactPhone.getText();",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "d680b72c-3ba7-4421-e42e-9cd6ffe76047",
+													"fieldName": "btnWhatsApp",
+													"fieldParent": "8689e3e4-fc88-4dde-dcd2-18ee21a4532d",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"customComponent": false,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://fa-brands/whatsapp",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "document.location.href = \"https://wa.me/\"+contactPhone.getText();",
+															"script": "document.location.href = \"https://wa.me/\"+contactPhone.getText();",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "22.8.8.1244",
+	"application": "neptbb_contact_card",
+	"title": "UTIL",
+	"description": "Contact Card with Communications",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "C",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_fiori_3",
+	"ui5_version": "1.71CDN",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": false,
+	"ui5_ionic": false,
+	"useV2AppHandler": false,
+	"compilerTarget": 3,
+	"apis": [],
+	"package": "BADB76E0-0617-ED11-BD6E-A085FCBC6CDC"
+}
